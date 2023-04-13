@@ -37,12 +37,12 @@ def perform
     crypto = Hash[firm.zip(price.map(&:to_f))]
     #puts crypto.is_a?(Hash)
     print_crypto(crypto)
-    puts ">> le crypto qui a la plus grande valeur est = #{crypto.select{|key, value|value == crypto.values.max}}"
-    puts ">> les cryptos qui ont les plus petites valeurs sont = #{crypto.select{|key, value|value == crypto.values.min}}"
+    puts ">> le crypto qui a la plus grande valeur est = #{crypto.select{|key, value|value == crypto.values.max}}."
+    puts ">> les cryptos qui ont les plus petites valeurs sont = #{crypto.select{|key, value|value == crypto.values.min}}."
     inferior = crypto.select{|key, value|value < 6000.0}
     print_inf(inferior)
-    inferior = crypto.select{|key, value|value < 6000.0}.max_by(&:last)
-    print_inf(inferior)
+    max_val = crypto.select{|key, value|value < 6000.0}.max_by(&:last)
+    puts ">>>> Parmi les cryptos dont la valeur est inférieur à 6000, la crypto ayant la plus grande valeur est #{max_val}."
 end
 
 perform
