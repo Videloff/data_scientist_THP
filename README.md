@@ -4,6 +4,8 @@ data_scientist_THP
 
 │   ├── 00_journalists.rb
 
-│   └── 01_cryptocurrencies.rb
+│   ├── 01_cryptocurrencies.rb
+
+│   └── sources.rb
 
 └── README.md
